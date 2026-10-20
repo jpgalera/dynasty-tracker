@@ -28,7 +28,7 @@ jobs:
       - name: Fetch Armory data
         env:
           DYNASTY_CHARACTER: lXlGhostlXl
-        run: python scripts/sync.py
+        run: python dynasty-tracker-github-pages/scripts/sync.py
 
       - name: Commit updated snapshot
         run: |
