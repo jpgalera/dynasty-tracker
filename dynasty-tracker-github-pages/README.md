@@ -41,3 +41,12 @@ Only query publicly accessible read-only API routes. Do not store credentials or
 ### Test locally
 
 Serve the folder over HTTP to test hosted snapshot loading: `python -m http.server 8000`, then visit `http://localhost:8000/`. Direct `file://` opening may block `fetch()`; the bundled fallback snapshot still renders.
+
+## Manual sync buttons
+
+- **Sync now:** tries to fetch the 14 public Armory routes directly from the visitor's browser and saves a new snapshot in that browser. **Cross-origin (CORS) restrictions may prevent this on GitHub Pages.** A failure does not replace stored data. This action does **not** publish to GitHub.
+- **Run GitHub sync ↗:** opens the repository's GitHub Actions workflow page. Sign in to GitHub and select **Run workflow**. GitHub Pages cannot securely trigger `workflow_dispatch` on its own without an authenticated backend or OAuth flow; **do not embed a GitHub personal access token in the website**.
+- **Refresh hosted:** reloads the manifest and published snapshots after a GitHub Actions run completes and Pages has deployed the new commit.
+- **Import JSON:** remains the fallback if Armory blocks cross-origin requests or GitHub runners.
+
+If you later want a truly one-click *published* sync, add an authenticated backend or GitHub App that validates the signed-in user and triggers the workflow server-side.
