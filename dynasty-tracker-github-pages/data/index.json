@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T06:48:34Z",
+  "updatedAt": "2026-11-25T08:34:55Z",
   "character": "lXlGhostlXl",
   "snapshots": [
     {
@@ -71,6 +71,11 @@
       "id": "2026-11-22T06:48:34Z",
       "date": "2026-11-22T06:48:34Z",
       "path": "snapshots/2026-11-22.json"
+    },
+    {
+      "id": "2026-11-25T08:34:55Z",
+      "date": "2026-11-25T08:34:55Z",
+      "path": "snapshots/2026-11-25.json"
     }
   ]
 }
